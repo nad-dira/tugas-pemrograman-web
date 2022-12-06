@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya Parkir</title>
+</head>
+<body>
+    <label for="JM">Jam Masuk</label>
+    <input id="JM" type="number">
+    <br>
+    <br>
+    <label for="JK">Jam Keluar</label>
+    <input id="JK" type="number">
+    <br>
+    <br>
+    <label for="LP">Lama Parkir</label>
+    <input id="LP" type="number">
+    <br>
+    <br>
+    <label for="BP">Biaya Parkir</label>
+    <input id="BP" type="number">
+    <button onclick="HitungJamParkir()">Hitung</button>
+
+    <script>
+        function HitungJamParkir() {
+            const LP = document.getElementById('LP');
+            const BP = document.getElementById('BP');
+            const JM = document.getElementById('JM');
+            const JK = document.getElementById('JK');
+
+            if (LP.value == 2) {
+                BP.value = 3000;
+            } else if (LP.value > 2) {
+                BP.value = LP.value * 1000 + 1000;
+            }
+        }
+    </script>
+</body>
+</html>
